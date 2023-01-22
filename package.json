@@ -1,4 +1,43 @@
 {
   "name": "astro-plugin-worker-links",
-  "packageManager": "yarn@3.3.1"
+  "description": "Automatically create shortened urls via worker-links",
+  "version": "0.1.0",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "author": "Ovyerus <ovy@ovyerus>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ovyerus/astro-plugin-worker-links.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "astro-integration",
+    "worker-links",
+    "shortener",
+    "cloudflare"
+  ],
+  "bugs": "https://github.com/ovyerus/astro-plugin-worker-links/issues",
+  "homepage": "https://github.com/ovyerus/astro-plugin-worker-links",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "packageManager": "yarn@3.3.1",
+  "dependencies": {
+    "astro": "^1.9.2",
+    "colorette": "^2.0.19",
+    "ofetch": "^1.0.0",
+    "typescript": "^4.9.4",
+    "zod": "^3.20.2"
+  }
 }

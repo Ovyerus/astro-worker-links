@@ -1,6 +1,6 @@
 {
   "name": "astro-worker-links",
-  "description": "Automatically create shortened urls via worker-links",
+  "description": "Automatically create shortened urls for your Astro project via worker-links",
   "version": "0.1.0",
   "type": "module",
   "types": "./dist/index.d.ts",

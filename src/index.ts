@@ -1,8 +1,8 @@
 import type { AstroConfig, AstroIntegration } from "astro";
 import { ofetch } from "ofetch";
 import { ZodError } from "zod";
-import { Logger } from "./logger";
-import { optionsSchema } from "./schema";
+import { Logger } from "./logger.js";
+import { optionsSchema } from "./schema.js";
 
 type Promisable<T> = Promise<T> | T;
 type PageMapping = Array<{ page: string; shortlink: string }>;

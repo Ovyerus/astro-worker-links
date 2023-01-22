@@ -1,0 +1,4 @@
+{
+  "name": "astro-plugin-worker-links",
+  "packageManager": "yarn@3.3.1"
+}

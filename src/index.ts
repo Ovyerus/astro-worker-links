@@ -20,7 +20,7 @@ function formatConfigErrorMessage(err: ZodError) {
   return "Invalid config\n" + errorList.join("\n");
 }
 
-const PKG_NAME = "astro-plugin-worker-links";
+const PKG_NAME = "astro-worker-links";
 
 const createPlugin = (options?: WorkerLinksOptions): AstroIntegration => {
   let config: AstroConfig;

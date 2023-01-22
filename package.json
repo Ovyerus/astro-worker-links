@@ -1,5 +1,5 @@
 {
-  "name": "astro-plugin-worker-links",
+  "name": "astro-worker-links",
   "description": "Automatically create shortened urls via worker-links",
   "version": "0.1.0",
   "type": "module",
@@ -8,7 +8,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ovyerus/astro-plugin-worker-links.git"
+    "url": "https://github.com/ovyerus/astro-worker-links.git"
   },
   "engines": {
     "node": ">=18"
@@ -19,8 +19,8 @@
     "shortener",
     "cloudflare"
   ],
-  "bugs": "https://github.com/ovyerus/astro-plugin-worker-links/issues",
-  "homepage": "https://github.com/ovyerus/astro-plugin-worker-links",
+  "bugs": "https://github.com/ovyerus/astro-worker-links/issues",
+  "homepage": "https://github.com/ovyerus/astro-worker-links",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch"

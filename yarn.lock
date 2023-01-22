@@ -922,9 +922,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-plugin-worker-links@workspace:.":
+"astro-worker-links@workspace:.":
   version: 0.0.0-use.local
-  resolution: "astro-plugin-worker-links@workspace:."
+  resolution: "astro-worker-links@workspace:."
   dependencies:
     astro: ^1.9.2
     colorette: ^2.0.19

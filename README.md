@@ -1,1 +1,1 @@
-# astro-plugin-worker-links
+# astro-worker-links

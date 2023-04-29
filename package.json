@@ -33,7 +33,7 @@
   "files": [
     "dist"
   ],
-  "packageManager": "yarn@3.3.1",
+  "packageManager": "yarn@3.5.0",
   "dependencies": {
     "astro": "^1.9.2",
     "colorette": "^2.0.19",

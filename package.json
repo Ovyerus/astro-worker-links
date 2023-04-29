@@ -4,11 +4,11 @@
   "version": "0.1.1",
   "type": "module",
   "types": "./dist/index.d.ts",
-  "author": "Ovyerus <ovy@ovyerus>",
+  "author": "Ovyerus <ovy@ovyerus.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ovyerus/astro-worker-links.git"
+    "url": "https://github.com/Ovyerus/astro-worker-links.git"
   },
   "engines": {
     "node": ">=18"
@@ -19,8 +19,8 @@
     "shortener",
     "cloudflare"
   ],
-  "bugs": "https://github.com/ovyerus/astro-worker-links/issues",
-  "homepage": "https://github.com/ovyerus/astro-worker-links",
+  "bugs": "https://github.com/Ovyerus/astro-worker-links/issues",
+  "homepage": "https://github.com/Ovyerus/astro-worker-links",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",

@@ -22,9 +22,9 @@
   "bugs": "https://github.com/Ovyerus/astro-worker-links/issues",
   "homepage": "https://github.com/Ovyerus/astro-worker-links",
   "scripts": {
-    "build": "tsc",
+    "build": "rimraf ./dist && tsc",
     "dev": "tsc --watch",
-    "prepublish": "yarn build"
+    "prepare": "yarn build"
   },
   "exports": {
     ".": "./dist/index.js",
@@ -35,13 +35,17 @@
   ],
   "packageManager": "yarn@3.5.0",
   "dependencies": {
-    "astro": "^2.3.2",
     "colorette": "^2.0.20",
     "ofetch": "^1.0.1",
     "typescript": "^5.0.4",
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "prettier": "^2.8.8"
+    "astro": "^2.3.2",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.0"
+  },
+  "peerDependencies": {
+    "astro": "^2.0.0"
   }
 }

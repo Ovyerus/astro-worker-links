@@ -24,6 +24,7 @@ const PKG_NAME = "astro-worker-links";
 
 const createPlugin = (options?: WorkerLinksOptions): AstroIntegration => {
   let config: AstroConfig;
+  const logger = new Logger(PKG_NAME);
 
   return {
     name: PKG_NAME,
@@ -32,7 +33,6 @@ const createPlugin = (options?: WorkerLinksOptions): AstroIntegration => {
         config = cfg;
       },
       "astro:build:done": async ({ pages }) => {
-        const logger = new Logger(PKG_NAME);
         let opts: WorkerLinksOptions;
 
         try {

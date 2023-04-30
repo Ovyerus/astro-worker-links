@@ -1,7 +1,7 @@
 {
   "name": "astro-worker-links",
   "description": "Automatically create shortened urls for your Astro project via worker-links",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "type": "module",
   "types": "./dist/index.d.ts",
   "author": "Ovyerus <ovy@ovyerus.com>",

@@ -3,6 +3,7 @@ import { ofetch } from "ofetch";
 import { ZodError } from "zod";
 import { Logger } from "./logger.js";
 import { optionsSchema } from "./schema.js";
+import { gray, magenta } from "colorette";
 
 type Promisable<T> = Promise<T> | T;
 type PageMapping = Array<{ page: string; shortlink: string }>;
@@ -66,16 +67,43 @@ const createPlugin = (options?: WorkerLinksOptions): AstroIntegration => {
         if (!pageMapping.length)
           return logger.warn("Empty page mapping generated. Skipping");
 
-        for (const entry of pageMapping) {
-          const url = new URL(entry.shortlink.replace(/\/$/, ""), opts.domain);
-          await ofetch(url.href, {
-            method: "PUT",
-            headers: { Authorization: opts.secret, URL: entry.page },
+        const body = Object.fromEntries(
+          pageMapping.map((p) => [p.shortlink.replace(/\/$/, ""), p.page])
+        );
+        let result: any;
+
+        try {
+          result = await ofetch(opts.domain, {
+            method: "POST",
+            headers: {
+              Authorization: opts.secret,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(body),
           });
+        } catch (err) {
+          if (!(err as any).data) {
+            logger.error("Failed to create new shortlinks", err);
+          }
+          logger.error(
+            `Failed to create new shortlinks:\n${JSON.stringify(
+              (err as any).data,
+              null,
+              2
+            )}`
+          );
+          return;
         }
 
-        logger.success(`Created ${pageMapping.length} worker links!`);
-        // TODO: map of shortlink to page
+        const resultMap = result.entries
+          .map(
+            (e: { key: string; shorturl: string; longurl: string }) =>
+              `  ${magenta(`/${e.key}`)}\n    ${gray("->")} ${e.longurl}`
+          )
+          .join("\n");
+        logger.success(
+          `Created ${pageMapping.length} worker links on ${opts.domain}!\n${resultMap}\n`
+        );
       },
     },
   };

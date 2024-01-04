@@ -1,7 +1,7 @@
 {
   "name": "astro-worker-links",
   "description": "Automatically create shortened urls for your Astro project via worker-links",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "types": "./dist/index.d.ts",
   "author": "Ovyerus <ovy@ovyerus.com>",
@@ -24,7 +24,7 @@
   "scripts": {
     "build": "rimraf ./dist && tsc",
     "dev": "tsc --watch",
-    "prepare": "yarn build"
+    "prepack": "yarn build"
   },
   "exports": {
     ".": "./dist/index.js",

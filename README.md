@@ -1,5 +1,10 @@
 # astro-worker-links
 
+> [!IMPORTANT]  
+> astro-worker-links has been succeeded by
+> [astro-shortlinks](https://github.com/Ovyerus/astro-shortlinks), which supports other different
+> shortlink providers, including worker-links.
+
 Automatically create [worker-links](https://github.com/erisa/worker-links)
 redirects for your [Astro](https://astro.build/) pages at build time!
 
